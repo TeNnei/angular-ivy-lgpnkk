@@ -1,0 +1,10 @@
+ .notifications-block {
+   padding: .5rem, 1rem;
+   border: 1px dashed #ccc;
+   margin-bottom: 1rem;
+ }
+
+ label {
+   margin-bottom: .5rem;
+   font-size: 24;
+}
