@@ -6,11 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.notifications.components.css']
 })
 export class Notificaitons{
-  title = 'Notifications'
+  title = 'This compoent using Google Translate API'
 
-  getInfo(){
-    return 'Successed create notifications message'
-  }
+  translatedValue: string = 'Here will be your text'
 
   changeTitle(value: string) {
     this.title = value

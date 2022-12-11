@@ -1,24 +1,28 @@
-
 <div class="notifications-block">
   <h1>{{title}}</h1>
-  <p>
-    <label for="sname">System Name: </label>
-  <input 
-    name="sname" 
-    type="text" 
-  />
+<p><label for="sname">Text:</label></p>  
+<p>
+  <textarea class="text"
+    #input_text
+    id="sname" 
+    type="text">
+  </textarea>  
 </p>
-  <label for="message">Message: </label>
-  <input 
-    #input
-    name="message"
-    type="text"
-  />
 
-  <p>
-    <button (click)="changeTitle(input.value)">Change title</button>
-  </p>
-  
- 
+<hr>
+
+<p><label for="translated-text">Translated Text: </label></p>
+<p>
+  <textarea class="translated-text" 
+    #input_translated_text
+    [value]="translatedValue"
+    id="translated-text"
+    type="text">
+  </textarea>
+</p>
+
+<p>
+  <button (click)="changeTitle(input_translated_text.value)">Translate</button>
+</p>
 </div>
 
