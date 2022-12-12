@@ -8,13 +8,14 @@ import {TranslateObject} from './TranslateService/translate.object'
   styleUrls: ['./app.notifications.components.css']
 })
 export class Notificaitons{
+
+  private httpTranslate: TranslateService
+
   public title = 'This compoent using Google Translate API'
 
   public value: string = 'Here will be your text'
 
   public traslatedObject: TranslateObject = new TranslateObject('','ru-RU','en_EN','text')
-
-  constructor(private httpTranslate: TranslateService){}
 
   translateMethod() {
     this.value = this.traslatedObject.q
