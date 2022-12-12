@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import {TranslateService} from './TranslateService/translate.service'
-import {TranslateObject} from './TranslateService/translate.object'
+import {TranslateService} from '../TranslateService/translate.service'
+import {TranslateObject} from '../TranslateService/translate.object'
 
 @Component({
-  selector: 'notifcaitons-component',
-  templateUrl: './app.notifications.components.html',
-  styleUrls: ['./app.notifications.components.css'],
+  selector: 'translated-first-component',
+  templateUrl: './app.translate.first.components.html',
+  styleUrls: ['./app.translate.first.components.css'],
   providers: [TranslateService]
 })
-export class Notificaitons{
+export class TranslateFirstComponent{
 
   constructor(private httpTranslate: TranslateService){}
 

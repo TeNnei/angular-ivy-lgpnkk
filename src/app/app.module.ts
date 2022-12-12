@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component'
-import { Notificaitons } from './app.notifications.component'
+import { TranslateFirstComponent } from './translated-first-component/app.translate.first.component'
 
 
 
@@ -16,7 +16,7 @@ import { Notificaitons } from './app.notifications.component'
   ],
   declarations: [
     AppComponent,
-    Notificaitons
+    TranslateFirstComponent
     ],
   bootstrap: [AppComponent]
 })
