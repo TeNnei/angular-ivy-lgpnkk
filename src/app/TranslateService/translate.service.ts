@@ -13,14 +13,8 @@ export class TranslateService {
     .set('Content-Type', 'application/json; charset=utf-8')
     .set('X-goog-api-key', '');
 
-    const body = {
-      q: translateObject.q, 
-      source: translateObject.source, 
-      target: translateObject.target, 
-      format: translateObject.format
-    }
 
-     return this.http.post('https://translation.googleapis.com/language/translate/v2', body, {headers: headers, observe: "response"})
+     return this.http.post('https://translation.googleapis.com/language/translate/v2', translateObject, {headers: headers, observe: "response"})
   }
   
 }
