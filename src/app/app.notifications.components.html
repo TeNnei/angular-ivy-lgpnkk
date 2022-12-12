@@ -3,7 +3,7 @@
 <p><label for="sname">Text:</label></p>  
 <p>
   <textarea class="text"
-    [ngModel] = "translatedValue"
+    [ngModel] = "traslatedObject.q"
     #input_text
     id="sname" 
     type="text">
@@ -23,7 +23,7 @@
 </p>
 
 <p>
-  <button (click)="translateMethod(translatedValue)">Translate</button>
+  <button (click)="translateMethod()">Translate</button>
 </p>
 </div>
 

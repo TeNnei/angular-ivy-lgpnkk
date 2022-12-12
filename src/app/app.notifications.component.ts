@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {TranslateService} from './TranslateService/translate.service'
+import {TranslateObject} from './TranslateService/translate.object'
 
 @Component({
   selector: 'notifcaitons-component',
@@ -7,13 +8,18 @@ import {TranslateService} from './TranslateService/translate.service'
   styleUrls: ['./app.notifications.components.css']
 })
 export class Notificaitons{
-  title = 'This compoent using Google Translate API'
+  public title = 'This compoent using Google Translate API'
 
-  value: string = 'Here will be your text'
+  public value: string = 'Here will be your text'
 
-  translatedValue: string = ''
+  public traslatedObject: TranslateObject = new TranslateObject('','ru-RU','en_EN','text')
 
-  translateMethod(value: string) {
-    
+  private httpTranslate: TranslateService
+
+  translateMethod() {
+    this.httpTranslate.translate(this.traslatedObject).subscribe({
+      next: (data: any) => {this.value = data},
+      error: error=> console.log(error)
+    })
   }
 }
