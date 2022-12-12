@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {TranslateService} from './TranslateService/translate.service'
 
 @Component({
   selector: 'notifcaitons-component',
@@ -8,9 +9,11 @@ import { Component } from '@angular/core';
 export class Notificaitons{
   title = 'This compoent using Google Translate API'
 
-  translatedValue: string = 'Here will be your text'
+  value: string = 'Here will be your text'
 
-  changeTitle(value: string) {
-    this.title = value
+  translatedValue: string = ''
+
+  translateMethod(value: string) {
+    
   }
 }

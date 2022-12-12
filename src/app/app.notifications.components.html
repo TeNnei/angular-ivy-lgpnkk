@@ -3,6 +3,7 @@
 <p><label for="sname">Text:</label></p>  
 <p>
   <textarea class="text"
+    [ngModel] = "translatedValue"
     #input_text
     id="sname" 
     type="text">
@@ -13,16 +14,16 @@
 
 <p><label for="translated-text">Translated Text: </label></p>
 <p>
-  <textarea class="translated-text" 
-    #input_translated_text
-    [value]="translatedValue"
+  <textarea class="translated-text"
+    [value]="value"
     id="translated-text"
-    type="text">
+    type="text"
+    readonly>
   </textarea>
 </p>
 
 <p>
-  <button (click)="changeTitle(input_translated_text.value)">Translate</button>
+  <button (click)="translateMethod(translatedValue)">Translate</button>
 </p>
 </div>
 
