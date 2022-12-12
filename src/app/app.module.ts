@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component'
 import { TranslateFirstComponent } from './translated-first-component/app.translate.first.component'
+import { TranslateSecondElement } from './translated-second-component/app.translate.second.component'
 
 
 
@@ -16,7 +17,8 @@ import { TranslateFirstComponent } from './translated-first-component/app.transl
   ],
   declarations: [
     AppComponent,
-    TranslateFirstComponent
+    TranslateFirstComponent,
+    TranslateSecondElement
     ],
   bootstrap: [AppComponent]
 })
