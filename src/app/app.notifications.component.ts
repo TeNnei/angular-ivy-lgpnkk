@@ -10,7 +10,7 @@ import {TranslateObject} from './TranslateService/translate.object'
 })
 export class Notificaitons{
 
- constructor(private httpTranslate: TranslateService){}
+  private httpTranslate: TranslateService
 
   public title = 'This compoent using Google Translate API'
 
