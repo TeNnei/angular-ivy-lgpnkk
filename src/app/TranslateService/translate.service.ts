@@ -5,7 +5,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 @Injectable()
 export class TranslateService {
 
-  constructor(private http: HttpClient){ }
+  constructor(private http: HttpClient){}
 
   translate(translateObject: TranslateObject){
 
