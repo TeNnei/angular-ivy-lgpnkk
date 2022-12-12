@@ -10,11 +10,13 @@ import {TranslateObject} from '../TranslateService/translate.object'
 })
 export class TranslateFirstComponent{
 
-  public title = 'This compoent using Google Translate API'
+  constructor(private translateServise: TranslateService){}
 
-  public value: string = 'Here will be your text'
+  public title = 'This compoent using Google Translate API'
 
   public traslatedObject: TranslateObject = new TranslateObject('','ru-RU','uz-UZ','text')
 
- 
+  translateMethod() {
+    this.translateServise.translate(this.traslatedObject)
+  }
 }
