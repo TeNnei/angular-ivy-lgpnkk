@@ -17,7 +17,8 @@ export class TranslateService {
       q: translateObject.q, 
       source: translateObject.source, 
       target: translateObject.target, 
-      format: translateObject.format}
+      format: translateObject.format
+    }
 
      return this.http.post('https://translation.googleapis.com/language/translate/v2', body, {headers: headers})
   }

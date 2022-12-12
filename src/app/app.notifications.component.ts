@@ -14,9 +14,10 @@ export class Notificaitons{
 
   public traslatedObject: TranslateObject = new TranslateObject('','ru-RU','en_EN','text')
 
-  private httpTranslate: TranslateService
+  constructor(private httpTranslate: TranslateService){}
 
   translateMethod() {
+    this.value = this.traslatedObject.q
     this.httpTranslate.translate(this.traslatedObject).subscribe({
       next: (data: any) => {this.value = data},
       error: error=> console.log(error)
