@@ -5,7 +5,8 @@ import {TranslateObject} from './TranslateService/translate.object'
 @Component({
   selector: 'notifcaitons-component',
   templateUrl: './app.notifications.components.html',
-  styleUrls: ['./app.notifications.components.css']
+  styleUrls: ['./app.notifications.components.css'],
+  providers: [TranslateService]
 })
 export class Notificaitons{
 
