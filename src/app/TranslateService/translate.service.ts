@@ -11,7 +11,7 @@ export class TranslateService {
 
     const headers = new HttpHeaders()
     .set('Content-Type', 'application/json; charset=utf-8')
-    .set('X-goog-api-key', 'AIzaSyDyfFMvi8tGXscwDpGHd40p3Fa7Gk5s7N0');
+    .set('X-goog-api-key', '');
 
     const body = {
       q: translateObject.q, 
@@ -20,7 +20,7 @@ export class TranslateService {
       format: translateObject.format
     }
 
-     return this.http.post('https://translation.googleapis.com/language/translate/v2', body, {headers: headers})
+     return this.http.post('https://translation.googleapis.com/language/translate/v2', body, {headers: headers, observe: "response"})
   }
   
 }
