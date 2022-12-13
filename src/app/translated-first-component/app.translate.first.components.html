@@ -1,6 +1,20 @@
 <div class="notifications-block">
   <h1>{{title}}</h1>
 <p><label for="sname">Text:</label></p>  
+
+<div class="language-selector">
+  <label for="selector-1">Source: </label>
+  <select  [(ngModel)] = "traslatedObject.source" name="from-selector" id="selector-1">
+    <option *ngFor='let languageName of languageSize' >{{languageName}}</option>
+  </select>
+
+  <label for="selector-2"> Target: </label>
+  <select [(ngModel)] = "traslatedObject.target" name="from-selector" id="selector-1">
+  <option *ngFor='let languageName of languageSize'>{{languageName}}</option>
+</select>
+
+</div>
+
 <p>
   <textarea class="text"
     [(ngModel)] = "traslatedObject.q"
