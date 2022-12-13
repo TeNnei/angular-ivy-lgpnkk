@@ -6,7 +6,6 @@ import {TranslateObject} from '../TranslateService/translate.object'
   selector: 'translated-first-component',
   templateUrl: './app.translate.first.components.html',
   styleUrls: ['./app.translate.first.components.css'],
-  providers: [TranslateService]
 })
 export class TranslateFirstComponent{
 
